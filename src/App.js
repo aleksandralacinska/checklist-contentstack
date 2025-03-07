@@ -36,9 +36,9 @@ const checklistData = [
       { id: 9, text: "sections", type: "done/nd", description: "Podmień wszystkie teksty na nowy język z zachowaniem oryginalnego podziału na sekcje. Pamiętaj zarówno o body, jak i o heading w section" },
       { id: 10, text: "accordions", type: "done/nd", description: "Zmień tytuły panelów w danym accordionie" },
       { id: 11, text: "cards", type: "done/nd", description: "➡️Jeśli karta miała podpięte istniejące entry, to Contentstack automatycznie wyłapuje nową wersję w odpowiednim języku i nic nie trzeba robić. \n ➡️Jeśli w karcie mieliśmy broszurę, to należy ją podmienić zgodnie z procedurą umieszczania broszur." },
-      { id: 12, text: "buttons", type: "done/nd", description: "➡️Jeśli przycisk kieruje do strony zewnętrznej innej niż w EN Master, to zmieniamy napisz na przycisku i wklejamy nowy link. \n ➡️Jeśli przycisk kieruje do jakiejś podstrony, to zmieniamy tylko napis na przycisku - poprawnie podpięte entry powinno samo wykryć analogiczną lokalizację podstrony w danej wersji językowej. \n ➡️Jeśli przycisk posiada podpiętą broszurę, to zmieniamy zarówno napis na przycisku, jak i wgrywamy nowy plik zgodnie z procedurą umieszczania broszur." },
+      { id: 12, text: "buttons", type: "done/nd", description: "➡️Jeśli przycisk kieruje do strony zewnętrznej innej niż w EN Master, to zmieniamy napis na przycisku i wklejamy nowy link. \n ➡️Jeśli przycisk kieruje do jakiejś podstrony, to zmieniamy tylko napis na przycisku - poprawnie podpięte entry powinno samo wykryć analogiczną lokalizację podstrony w danej wersji językowej. \n ➡️Jeśli przycisk posiada podpiętą broszurę, to zmieniamy zarówno napis na przycisku, jak i wgrywamy nowy plik zgodnie z procedurą umieszczania broszur." },
       { id: 13, text: "videos", type: "done/nd", description: "Zweryfikuj czy w nowej wersji językowej nie ma nowego filmiku => jeśli tak, to pamiętaj, aby skopiować EMBED link i nadać właściwy dla danego języka tytuł i opis filmu." },
-      { id: 14, text: "images", type: "done/nd", description: "Należy zwrócić uwagę czy obraz jest uniwersalny czy ma różne wersje językowe. \n Jeśli na obrazku są napisy, to najpewniej powinien on mieć swój odpowiednik dla każdej wersji językowej => należy podpiąć i zlokalizować nowe entry dla konkretnej wersji językowej." },
+      { id: 14, text: "images", type: "done/nd", description: "➡️Należy zwrócić uwagę czy obraz jest uniwersalny czy ma różne wersje językowe. \n Jeśli na obrazku są napisy, to najpewniej powinien on mieć swój odpowiednik dla każdej wersji językowej => należy podpiąć i zlokalizować nowe entry dla konkretnej wersji językowej. \n ➡️Każdy obrazek należy zlokalizować i nadać mu alt tag (kolumna F pliku images-Compair)" },
       { id: 15, text: "brochures", type: "done/nd", description: "Wgraj nowe broszury do odpowiedniej lokalizacji na Contentstacku (folder Brochures/...) i dopiero wtedy podepnij nowe entry, lokalizując je dla konkretnej wersji językowej => pamiętaj o nowym tytule i description." },
     ],
   },
@@ -62,7 +62,7 @@ const Checklist = () => {
 
   return (
     <div style={{ padding: "20px", maxWidth: "600px", margin: "auto" }}>
-      <h1>CHECKLISTA CONTENTSTACK<br></br>❗️zlokalizuj nową wersję językową❗️</h1>
+      <h1>CHECKLISTA CONTENTSTACK<br></br>❗️zlokalizuj nową wersję językową za pomocą przycisku SAVE❗️<br></br>🙅🏼Jeśli tego nie zrobisz, to będziesz jednocześnie edytował English Master psująć całą dotychczasową pracę.🗑️</h1>
       {checklist.map((chapter, chapterIndex) => (
         <div key={chapter.chapter}>
           <h2>{chapter.chapter}</h2>
