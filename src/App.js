@@ -56,7 +56,8 @@ const Checklist = () => {
   };
 
   const resetChecklist = () => {
-    setChecklist(checklistData);
+    alert("Good job, jedziemy dalej 😄🎉");
+    window.location.reload();
   };
 
   return (
